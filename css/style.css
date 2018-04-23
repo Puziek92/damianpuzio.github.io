@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    opacity: 0.25;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
