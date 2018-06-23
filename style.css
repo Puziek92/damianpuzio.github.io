@@ -1,8 +1,16 @@
-html,
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
     width: 100%;
+}
+
+html {
+    font-size: 10px;
 }
 
 body {
@@ -10,19 +18,69 @@ body {
 }
 
 header {
-    width: 100%;
+    position: relative;
     height: 100vh;
-    background-color: grey;
+    background-image: url(fuji-par.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+header .header-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
 
 }
 
-.content {
+header h1 {
+    font-size: 6rem;
+}
+
+header h3 {
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+main h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.about,
+.projects,
+.contact {
+    position: relative;
     width: 90%;
-    margin: 4em auto;
+    margin: 2em auto;
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
+}
+
+.image-sushi {
+    height: 300px;
+    background-image: url(sushi.jpg);
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 1200px;
+    min-height: 200px;
+    height: 40vh;
+    background-image: url(fuji2.jpg);
 }
 
 .logo {
@@ -37,6 +95,8 @@ header {
 nav {
     position: fixed;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 3;
 }
 
 nav ul {
@@ -52,6 +112,7 @@ nav ul {
 
 nav.black ul {
     background: #000;
+
 }
 
 nav ul li {
@@ -76,6 +137,26 @@ nav ul li a {
     display: none;
 }
 
+footer {
+    height: 30vh;
+    background-color: grey;
+}
+
+.container-list-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list-box {
+    flex-basis: 25%;
+    margin: 0 0px 20px 0px;
+}
+
+
+
 @media(max-width: 580px) {
     .logo {
         position: fixed;
@@ -84,16 +165,18 @@ nav ul li a {
     }
 
     nav ul {
-        max-height: 0px;
+        max-height: 5px;
         background: #000;
+
     }
 
     nav.black ul {
         background: #000;
+
     }
 
     .showing {
-        max-height: 20em;
+        max-height: 50em;
     }
 
     nav ul li {
@@ -105,5 +188,11 @@ nav ul li a {
 
     .menu-icon {
         display: block;
+    }
+}
+
+@media(max-width: 1024px) {
+    .parallax {
+        background-position: 80%;
     }
 }
